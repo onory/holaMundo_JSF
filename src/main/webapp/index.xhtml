@@ -10,6 +10,17 @@ L9 busca las etiquetas html de JSF
        
     </head>
     <body>
-        <h:outputLabel value="Hola Mundo desde JSF"/>
+        <h:form>
+            <table>
+                <tr>
+                    <!-- envia el valor de la etiqueta de nombre-->
+                    <td><h:outputLabel for="nombre " value="Nombre: "></h:outputLabel></td>
+                    <!-- con inputText se recupera el texto que ingresa el usuario-->
+                    <td><h:inputText id="nombre" value="#{candidato.nombre}"></h:inputText></td>
+                     <!-- nos muestra cuaqluier excepcion que deribe de la etiqueta nombre-->
+                    <td><h:message for="nombre"></h:message></td>
+                </tr>
+            </table>
+        </h:form>
     </body>
 </html>
